@@ -1,4 +1,4 @@
-require("config.lua")
+require("config")
 
 local module_name = "gargamel"
 

@@ -7,8 +7,11 @@ If NOT exist config.lua (
 )
 echo Generating Windows project...
 premake4 --os=windows --platform=x32 --file=premake.lua vs2010
+echo.
 echo Generating Mac project...
 premake4 --os=macosx --platform=universal32 --file=premake.lua gmake
+echo.
 echo Generating Linux project...
 premake4 --os=linux --platform=x32 --file=premake.lua gmake
+echo.
 pause
