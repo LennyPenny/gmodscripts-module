@@ -1,21 +1,10 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Build directory
+build/**
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# Project directories
+proj-*/**
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
+# Executables - Because I'm lazy and just shoved the premake executable in the folder.
 *.exe
 *.out
 *.app
