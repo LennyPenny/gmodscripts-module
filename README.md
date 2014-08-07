@@ -11,7 +11,7 @@ Setup
 --------
 Requirements:
 - premake4 (You can just throw the executable in there if you want...)
-- Source SDK (By default it assumes Valve's source-sdk-2013 is cloned in the same directory as this repository. You can change this later.)
+- Source SDK (By default it assumes Valve's [source-sdk-2013](https://github.com/ValveSoftware/source-sdk-2013) repository is cloned in the same directory as this repository. You can change this later.)
 - Visual Studio 2010 SP1 (For windows, not tested on other platforms.)
 
 Instructions:
