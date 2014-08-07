@@ -15,6 +15,7 @@ Requires:
 - Visual Studio 2010 SP1 (For windows, not tested on other platforms.)
 
 Instructions:
+
 1. Run premake.bat once.
 2. Edit config.lua if you want to specify a different location for the Source SDK.
 3. Run premake.bat again.
