@@ -9,7 +9,7 @@ It doesn't currently do any of that... Right now it just creates a directory and
 
 Setup
 --------
-Requires:
+Requirements:
 - premake4 (You can just throw the executable in there if you want...)
 - Source SDK (By deafault it assumes Valve's source-sdk-2013 is cloned in the same directory as this repository. You can change this later.)
 - Visual Studio 2010 SP1 (For windows, not tested on other platforms.)
