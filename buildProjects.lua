@@ -4,13 +4,24 @@ local module_name = "gargamel"
 
 local os_names = {windows="win32",macosx="osx",linux="linux"}
 
+local function setTarget(targetName)
+	targetname(targetName)
+	if os.get()=="windows" and config.out then
+		postbuildcommands{"move /Y ..\\build\\windows\\"..targetName..'.dll "'..config.out..'"'}
+	end
+end
+
 solution("gmodscripts-module")
 	language("C++")
-	location("proj-"..os.get() .."-".._ACTION)
-	flags{"Symbols","NoEditAndContinue","NoPCH","StaticRuntime","EnableSSE"}
 	kind("SharedLib")
+	location("proj-"..os.get() .."-".._ACTION)
 
 	defines{"GMMODULE"}
+	flags{"Symbols","NoEditAndContinue","NoPCH","StaticRuntime","EnableSSE"}
+
+	--From relese config
+	defines{"NDEBUG"}
+	flags{"Optimize","FloatFast"}
 
 	includedirs{"include/",config.source_sdk_dir.."mp/src/public/"}
 
@@ -41,15 +52,15 @@ solution("gmodscripts-module")
 	}
 
 	targetdir("build/"..os.get().."/")
-	targetname("gmsv_"..module_name.."_"..os_names[os.get()])
 
 	configurations{ 
-		"Release"
+		"1-ServerModule","2-ClientModule"
 	}
 	
-	configuration("Release")
-		defines{"NDEBUG"}
-		flags{"Optimize","FloatFast"}
+	configuration("1-ServerModule")
+		setTarget("gmsv_"..module_name.."_"..os_names[os.get()])
+	configuration("2-ClientModule")
+		setTarget("gmcl_"..module_name.."_"..os_names[os.get()])
 
 	project("gmodscripts-module")
 		files{"src/**.*","include/**.*"}
