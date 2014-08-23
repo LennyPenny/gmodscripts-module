@@ -1,5 +1,5 @@
 assert(os.getenv("SOURCE_SDK"), "SOURCE_SDK environmental variable not set")
-local SOURCE_SDK = os.getenv("SOURCE_SDK") .. "/mp/src/"
+local SOURCE_SDK = os.getenv("SOURCE_SDK") .. "mp/src/"
 
 local GMOD_FOLDER -- You could set this to your Garry's Mod folder so that it copies the DLL there.
 
