@@ -12,7 +12,7 @@ Requirements:
 - Source SDK (By default it assumes Valve's [source-sdk-2013](https://github.com/ValveSoftware/source-sdk-2013) repository is cloned in the same directory as this repository. You can change this later.)
 - Visual Studio 2013 (For windows, not tested on other platforms.)
 
-Instructions:
+Instructions: 
 
 1. Run premake.bat once.
 4. Build with Visual Studio.
